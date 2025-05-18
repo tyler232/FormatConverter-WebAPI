@@ -19,6 +19,7 @@ builder.WebHost.ConfigureKestrel(serverOptions => {
 });
 
 builder.Services.AddTransient<IConversionService, CsvService>();
+builder.Services.AddTransient<IConversionService, JsonService>();
 builder.Services.AddControllers().AddNewtonsoftJson();
 
 builder.Services.Configure<KestrelServerOptions>(options =>
